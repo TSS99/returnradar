@@ -1,0 +1,3 @@
+{
+  "mcpServers": { "returnradar": { "command": "returnradar-mcp", "args": [] } }
+}

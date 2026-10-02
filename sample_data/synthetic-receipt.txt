@@ -1,0 +1,12 @@
+FICTIONAL DEMO RECEIPT - NOT A REAL PURCHASE
+Merchant: Northline Audio (fictional)
+Product: Studio wireless headphones
+Purchase date: 2026-09-20
+Delivery date: 2026-09-22
+Order number: DEMO-0001
+Invoice number: SYNTHETIC-0001
+Total: USD 149.00
+Currency: USD
+Return policy: 14 days from delivery
+Warranty: 12 months from purchase
+These terms and this merchant are entirely fictional.

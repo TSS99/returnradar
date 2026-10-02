@@ -1,0 +1,8 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "returnradar",
+  "version": "0.1.0",
+  "description": "Track local purchases and verified return and warranty deadlines. Prepare request drafts without sending them.",
+  "license": "MIT",
+  "repository": "https://github.com/TSS99/returnradar"
+}

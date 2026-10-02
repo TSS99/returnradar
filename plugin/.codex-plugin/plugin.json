@@ -1,0 +1,7 @@
+{
+  "name": "returnradar",
+  "version": "0.1.0",
+  "description": "Local purchase and verified deadline tracking",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "returnradar"
+version = "0.1.0"
+description = "Local purchase, return and warranty tracking with MCP tools"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+  "fastapi==0.142.2", "uvicorn==0.54.0", "sqlalchemy==2.1.2",
+  "alembic==1.20.0", "pydantic==2.13.5", "pypdf==6.19.0",
+  "python-multipart==0.0.32", "mcp==2.2.0", "python-dateutil==2.9.0.post0",
+  "tzdata>=2026.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "httpx==0.28.1", "ruff==0.16.10", "pip-audit==2.10.1", "bandit==1.9.4"]
+
+[project.scripts]
+returnradar-mcp = "mcp_server.server:main"
+
+[tool.setuptools.packages.find]
+include = ["backend*", "mcp_server*"]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

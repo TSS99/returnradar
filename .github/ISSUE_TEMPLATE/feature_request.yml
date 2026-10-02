@@ -1,0 +1,17 @@
+name: Feature request
+description: Suggest a useful improvement
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What user problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Suggested behavior and alternatives
+      description: Consider accuracy, privacy and the free local workflow.
+    validations:
+      required: true
