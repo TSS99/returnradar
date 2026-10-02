@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=77"]
+requires = ["setuptools>=83"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest==9.1.1", "httpx==0.28.1", "ruff==0.16.10", "pip-audit==2.10.1", "bandit==1.9.4"]
+dev = ["pytest==9.1.1", "httpx==0.28.1", "ruff==0.16.10", "pip-audit==2.10.1", "bandit==1.9.4", "setuptools==84.0.0"]
 
 [project.scripts]
 returnradar-mcp = "mcp_server.server:main"

@@ -39,3 +39,9 @@ were corrected; the final local runs have no remaining failures.
 
 CI results are reported separately by GitHub Actions. The check suite also runs
 there on every push and pull request. No public hosting or paid API was provisioned.
+
+The first complete-source CI run passed all 58 backend tests, then detected
+PYSEC-2026-3447 in the runner's preinstalled setuptools 79.0.1. The development
+lock now includes setuptools 84.0.0 and isolated package builds require at least
+83, so installations replace the vulnerable bootstrap tool rather than suppress
+the audit finding.

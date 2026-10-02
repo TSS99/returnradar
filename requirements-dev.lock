@@ -166,6 +166,8 @@ rpds-py==2026.6.3
     #   referencing
 ruff==0.16.10
     # via returnradar (pyproject.toml)
+setuptools==84.0.0
+    # via returnradar (pyproject.toml)
 six==1.17.0
     # via python-dateutil
 sortedcontainers==2.4.0
