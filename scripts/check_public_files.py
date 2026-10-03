@@ -27,7 +27,10 @@ for name in filter(None, files):
     data = (ROOT / name).read_bytes()
     if any(pattern.search(data) for pattern in PATTERNS):
         failures.append(f"Possible credential: {name}")
-    if path.suffix.lower() == ".pdf" and name != "sample_data/synthetic-receipt.pdf":
+    if path.suffix.lower() == ".pdf" and name not in {
+        "sample_data/synthetic-receipt.pdf",
+        "hosted/sample_data/synthetic-receipt.pdf",
+    }:
         failures.append(f"Unexpected PDF: {name}")
 if failures:
     raise SystemExit("\n".join(failures))

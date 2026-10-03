@@ -48,3 +48,27 @@ jobs:
         run: npm run test:e2e
       - name: Package local plugin
         run: python -m scripts.package_plugin
+  hosted:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: hosted
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: hosted/package-lock.json
+      - name: Install hosted dependencies
+        run: npm ci
+      - name: Hosted account isolation, API, domain and MCP tests
+        run: |
+          npm run typecheck
+          npm test
+          npm audit --omit=dev
+          npm run build
+      - name: Report development dependency advisories
+        continue-on-error: true
+        run: npm audit --include=dev

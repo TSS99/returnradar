@@ -8,3 +8,6 @@
 - Use synthetic fixtures only. Keep databases, uploads, credentials and logs out of Git.
 - Verify changes with `python -m pytest`, `ruff check .`, and the frontend build.
 - Bind all local services to loopback. Public hosting needs a separate security design.
+
+- Hosted source lives in `hosted/`; follow `hosted/AGENTS.md` there. The local
+  backend/MCP instructions above apply to the original Python application.

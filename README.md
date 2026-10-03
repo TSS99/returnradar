@@ -2,14 +2,26 @@
 
 **Never miss a return, refund, or warranty deadline again.**
 
-A private, open-source home for your purchases. Upload a receipt, check the
+A private, open-source home for your purchases. Upload a receipt, review the
 details, record the applicable terms, and see what needs your attention.
-ReturnRadar runs on your computer with SQLite. The core workflow uses no paid
-API, account, cloud service, or language model.
 
-> Version 0.1 is a local single-user application. It is not a hosted service or
-> a published ChatGPT Directory plugin. A date is **confirmed** only when its
-> inputs are user verified; merchant eligibility and approval are separate.
+**Use the hosted beta: [Open ReturnRadar](https://returnradar.tss-99.chatgpt.site)**
+
+Sign in with ChatGPT, add a purchase or PDF receipt, and verify the actual terms.
+Your account works across devices and does not need your computer to stay on.
+Read the [user guide](https://returnradar.tss-99.chatgpt.site/guide).
+The owner can see aggregate usage in the [private dashboard](https://returnradar.tss-99.chatgpt.site/admin).
+
+Version 0.2 adds managed hosting, private accounts, cloud receipt storage,
+remote authenticated MCP tools and owner analytics. See [hosted operations](docs/hosted.md)
+and [hosted source](hosted/README.md). The hosting platform provisions a personal
+plugin; a public ChatGPT directory listing still requires separate approval.
+No paid resources or automatic billing were enabled.
+
+The original local application remains available below. Its SQLite data stays
+on your computer and is separate from hosted accounts. Neither version uses a
+paid model/API. A date is **confirmed** only when its inputs are user verified;
+merchant eligibility and approval are separate.
 
 ![Actual dashboard with explicitly enabled fictional demo records](docs/screenshots/overview-light.png)
 
@@ -42,7 +54,7 @@ starts empty.
 - Use eight MCP tools through the official Python MCP SDK, with shared business
   logic and structured results. Switch between light and dark themes.
 
-## Quick start
+## Local application quick start
 
 Requirements: **Python 3.11+**, **Node.js 22.12+** (or a current supported Node
 release), npm, and Git. Dependency downloads need internet access; everyday
